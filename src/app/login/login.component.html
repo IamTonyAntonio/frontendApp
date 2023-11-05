@@ -1,0 +1,28 @@
+<div class="menu-container">
+  <label><b>Menú de Acciones</b></label>
+  <hr>
+  <ul class="list-unstyled">
+    <li><button type="button" class="btn btn-secondary">Ver Formatos</button></li>
+    <li><button type="button" class="btn btn-secondary">Ver Convocatorias</button></li>
+    <li><button type="button" class="btn btn-secondary">Ver Convenios</button></li>
+  </ul>
+</div>
+
+
+<div class="login-page">
+  <div class="form">
+    <form class="login-form" (ngSubmit)="login()">
+      <div class="thumbnail">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg" />
+      </div>
+      <br>
+      <div>
+        <input type="number" class="form-control" id="floatingInput" placeholder="NUE" [(ngModel)]="NUE" name="NUE">
+      </div>
+      <div>
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password"  [(ngModel)]="password" name="password">
+      </div>
+      <button type="submit" class="btn btn-success">Acceder</button>
+    </form>
+  </div>
+</div>
