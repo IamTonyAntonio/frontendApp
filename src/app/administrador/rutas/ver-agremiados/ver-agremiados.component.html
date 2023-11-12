@@ -1,0 +1,44 @@
+<header>
+  <span><b>Editar trabajo</b></span>
+  <a class="back-button" href="/dashboard_administrador"><b><i class="fas fa-arrow-left"></i> Regresar</b></a>
+</header>
+<hr>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Apellido Paterno</th>
+      <th>Apellido Materno</th>
+      <th>Sexo</th>
+      <th>NUE</th>
+      <th>NUP</th>
+      <th>RFC</th>
+      <th>NSS</th>
+      <th>Fecha de Nacimiento</th>
+      <th>Teléfono</th>
+      <th>Cuota</th>
+      <th>Fecha de Creación</th>
+      <th>Fecha de Actualización</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let agremiado of agremiados">
+      <td>{{ agremiado.id }}</td>
+      <td>{{ agremiado.nombre }}</td>
+      <td>{{ agremiado.a_paterno }}</td>
+      <td>{{ agremiado.a_materno }}</td>
+      <td>{{ agremiado.sexo }}</td>
+      <td>{{ agremiado.NUE }}</td>
+      <td>{{ agremiado.NUP }}</td>
+      <td>{{ agremiado.RFC }}</td>
+      <td>{{ agremiado.NSS }}</td>
+      <td>{{ agremiado.fecha_nacimiento }}</td>
+      <td>{{ agremiado.telefono }}</td>
+      <td>{{ agremiado.cuota }}</td>
+      <td>{{ agremiado.created_at }}</td>
+      <td>{{ agremiado.updated_at }}</td>
+    </tr>
+  </tbody>
+</table>
