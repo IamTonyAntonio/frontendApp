@@ -18,6 +18,7 @@ import { VerSolicitudesComponent } from './administrador/rutas/ver-solicitudes/v
 import { FormatosComponent } from './opciones/formatos/formatos.component';
 import { ConvocatoriasComponent } from './opciones/convocatorias/convocatorias.component';
 import { ConveniosComponent } from './opciones/convenios/convenios.component';
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ConveniosComponent } from './opciones/convenios/convenios.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

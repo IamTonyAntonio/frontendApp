@@ -1,44 +1,51 @@
 <header>
-  <span><b>Editar trabajo</b></span>
-  <a class="back-button" href="/dashboard_administrador"><b><i class="fas fa-arrow-left"></i> Regresar</b></a>
+  <span><b>Listado de Agremiados</b></span>
+  <a class="back-button" (click)="goToDashboardAdministrador()"><i class="fas fa-arrow-left"></i> Regresar</a>
 </header>
+
 <hr>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Nombre</th>
-      <th>Apellido Paterno</th>
-      <th>Apellido Materno</th>
-      <th>Sexo</th>
-      <th>NUE</th>
-      <th>NUP</th>
-      <th>RFC</th>
-      <th>NSS</th>
-      <th>Fecha de Nacimiento</th>
-      <th>Teléfono</th>
-      <th>Cuota</th>
-      <th>Fecha de Creación</th>
-      <th>Fecha de Actualización</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let agremiado of agremiados">
-      <td>{{ agremiado.id }}</td>
-      <td>{{ agremiado.nombre }}</td>
-      <td>{{ agremiado.a_paterno }}</td>
-      <td>{{ agremiado.a_materno }}</td>
-      <td>{{ agremiado.sexo }}</td>
-      <td>{{ agremiado.NUE }}</td>
-      <td>{{ agremiado.NUP }}</td>
-      <td>{{ agremiado.RFC }}</td>
-      <td>{{ agremiado.NSS }}</td>
-      <td>{{ agremiado.fecha_nacimiento }}</td>
-      <td>{{ agremiado.telefono }}</td>
-      <td>{{ agremiado.cuota }}</td>
-      <td>{{ agremiado.created_at }}</td>
-      <td>{{ agremiado.updated_at }}</td>
-    </tr>
-  </tbody>
-</table>
+<div>
+  <br>
+  <table id="datatableAgremiados" class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th class="textoscentrados" scope="col">#</th>
+        <th class="textoscentrados" scope="col">Nombre</th>
+        <th class="textoscentrados" scope="col">Apellido Paterno</th>
+        <th class="textoscentrados" scope="col">Apellido Materno</th>
+        <th class="textoscentrados" scope="col">Sexo</th>
+        <th class="textoscentrados" scope="col">NUE</th>
+        <th class="textoscentrados" scope="col">NUP</th>
+        <th class="textoscentrados" scope="col">RFC</th>
+        <th class="textoscentrados" scope="col">NSS</th>
+        <th class="textoscentrados" scope="col">Fecha de Nacimiento</th>
+        <th class="textoscentrados" scope="col">Teléfono</th>
+        <th class="textoscentrados" scope="col">Cuota</th>
+        <th class="textoscentrados" scope="col">Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ag of agremiados; let i=index">
+        <td scope="row">{{ i + 1 }}</td>
+        <td>{{ ag.nombre }}</td>
+        <td>{{ ag.a_paterno }}</td>
+        <td>{{ ag.a_materno }}</td>
+        <td>{{ ag.sexo }}</td>
+        <td>{{ ag.NUE }}</td>
+        <td>{{ ag.NUP }}</td>
+        <td>{{ ag.RFC }}</td>
+        <td>{{ ag.NSS }}</td>
+        <td>{{ ag.fecha_nacimiento }}</td>
+        <td>{{ ag.telefono }}</td>
+        <td>{{ ag.cuota }}</td>
+        <td class="opciones-botones">
+          <button class="btn btn-warning" title="Editar trabajo"><i class="fas fa-edit"></i></button>
+          <button class="btn btn-secondary" title="Eliminar trabajo"><i class="fas fa-trash-alt"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
